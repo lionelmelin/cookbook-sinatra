@@ -1,0 +1,12 @@
+<ul>
+  <% @cookbook.all.each_with_index do |recipe, index|%>
+  <% tick = recipe.read? ? 'x' : ' '%>
+  <li>
+  <%= "#{index + 1}. [#{tick}] #{recipe.name} (#{recipe.prep_time}) Difficulty: #{recipe.difficulty}"%>
+  </li>
+  <% end %>
+</ul>
+
+<a href='/new'>
+  new recipe
+</a>
